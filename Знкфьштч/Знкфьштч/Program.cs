@@ -15,21 +15,13 @@ namespace Знкфьштч
             Console.WriteLine(1);
             
             for (int x = 0; x <= 2; x++)
-                Console.Write(2); 
-
-            Console.WriteLine("");
+                Console.Write(2 + "\n"); 
 
             for (int x = 0; x <= 3; x++)
-                Console.Write(3); 
-
-            Console.WriteLine("");
+                Console.Write(3 + "\n"); 
 
             for (int x = 0; x <= 4; x++)
-                Console.Write(4);
-
-
-            Console.WriteLine(""); 
-
+                Console.Write(4 + "\n");
 
             Console.ReadKey();
         }
