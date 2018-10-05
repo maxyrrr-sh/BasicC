@@ -10,8 +10,6 @@ namespace Знкфьштч
     {
         static void Main(string[] args)
         {
-            
-
             Console.WriteLine(1);
             
             for (int x = 0; x <= 2; x++)
