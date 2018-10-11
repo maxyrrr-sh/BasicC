@@ -17,7 +17,7 @@ namespace Exam
             Console.Write("Хімія: ");
             int him = Convert.ToInt32(Console.ReadLine());
 
-            bool result = (math + Phuz + him >= 180 || math + Phuz >= 140 || math + him >= 140)? true : false;
+            bool result = (math + Phuz + him >= 180 || math + Phuz >= 140 || math + him >= 140);
 
             Console.WriteLine(result ? "Студетн допущений":"Студент недопущений");
 
