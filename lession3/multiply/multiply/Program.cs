@@ -19,6 +19,8 @@ namespace multiply
                     Console.WriteLine($"Here you are {a * b} :)");
                 else
                     Console.WriteLine("Sorry, i support only digits from 0 to 10 :(");
+                else if (b_res == false|| a_res == false)
+                    Console.Write("I don't know now to multiply chars :(\n");
 
             Console.ReadKey();
         }   
