@@ -20,17 +20,27 @@ namespace Numbers
 
         public static bool IsSimple(int n)
         {
-            if ( (n > 1) || (n == 2) || (n % 2 != 0) )
-                return true;
+            bool isSimple = true;
 
-            int a = (int)Math.Sqrt(n);
-
-            for (int i = 3; i <= a; i += 2)
+            for (int i = 2; i <= n / 2; i++)
             {
-                if (n % i == 0) return false;
+                if (n % i == 0)
+                {
+                    isSimple = false;
+                    break;
+                }
             }
 
-            return true;
+            return isSimple;
+
+            //int a = (int)Math.Sqrt(n);
+
+            //for (int i = 3; i <= a; i += 2)
+            //{
+            //    if (n % i == 0) return false;
+            //}
+
+
         }
             
     }
