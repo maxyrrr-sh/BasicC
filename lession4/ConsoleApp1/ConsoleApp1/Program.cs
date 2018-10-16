@@ -60,7 +60,7 @@ namespace ConsoleApp1
                 } else if (a == 2)
                 {
                     Console.Write("Enter student`s sequence number to delete: ");
-                    byte x = Convert.ToByte(Console.ReadKey());
+                    byte x = Convert.ToByte(Console.ReadLine());
 
                 } else if (a == 3)
                     Console.WriteLine(StudentRegistry.GetAllInfo());
