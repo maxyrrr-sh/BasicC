@@ -14,27 +14,37 @@ namespace hw
             string input;
             string dir;
             Console.WriteLine(@"Please input file operation create / delete / copy");
-            input = Console.ReadLine(); dir = Console.ReadLine();
-            FileInfo fileInfo = new FileInfo(dir);
-            if (input == "create")
+            try
             {
-                string filename = @"\test.txt";
-                File.Create(dir + filename);
-                
-
-            } else if (input == "delete")
-            {
-                fileInfo.Delete();
-            } else if (input == "copy")
-            {
-                Console.WriteLine("Please input directory:");
-                string dir1 = Console.ReadLine();
-                if(fileInfo.Exists)
+                input = Console.ReadLine(); dir = Console.ReadLine();
+                FileInfo fileInfo = new FileInfo(dir);
+                if (input == "create")
                 {
-                    fileInfo.CopyTo(dir1, true);
-                   
+                    string filename = @"\test.txt";
+                    File.Create(dir + filename);
+
+
+                }
+                else if (input == "delete")
+                {
+                    fileInfo.Delete();
+                }
+                else if (input == "copy")
+                {
+                    Console.WriteLine("Please input directory:");
+                    string dir1 = Console.ReadLine();
+                    if (fileInfo.Exists)
+                    {
+                        fileInfo.CopyTo(dir1, true);
+
+                    }
                 }
             }
+            catch(IOException e)
+            {
+
+            }
+            catch ()
             Console.WriteLine("Success!");
             Console.ReadKey();
 
