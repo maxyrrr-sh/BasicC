@@ -10,12 +10,16 @@ namespace hw
     class Program
     {
         static void Main(string[] args)
-        { 
+        {
+            Console.Clear();
             string input;
             string dir;
+        tp:
+            
             Console.WriteLine(@"Please input file operation create / delete / copy");
             try
             {
+                throw new Exception();
                 input = Console.ReadLine(); dir = Console.ReadLine();
                 FileInfo fileInfo = new FileInfo(dir);
                 if (input == "create")
@@ -38,13 +42,24 @@ namespace hw
                         fileInfo.CopyTo(dir1, true);
 
                     }
+                    else
+                    {
+                        throw new IOException();
+                    }
                 }
             }
+            
             catch(IOException e)
             {
-
+                Console.WriteLine("");
             }
-            catch ()
+            catch (Exception e)
+            {
+                Console.WriteLine("Sorry, something went wrong :9( \nDo you want to try again? y/n");
+                string a = Console.ReadLine();
+                if (a == "y")
+                    goto tp;
+            }
             Console.WriteLine("Success!");
             Console.ReadKey();
 
